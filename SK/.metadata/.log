@@ -4678,3 +4678,22 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.lsp4e 1 0 2025-09-30 09:57:35.289
 !MESSAGE [Info]	[certificates] Removed 11 expired certificates
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 4 0 2025-09-30 10:07:50.691
+!MESSAGE Failed to refresh Code Minings for editor.
+!STACK 1
+Java Model Exception: Error in Java Model (code 969): sk_test does not exist
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:562)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2611)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:2352)
+	at org.eclipse.jdt.internal.core.JavaProject.getRawClasspath(JavaProject.java:2395)
+	at org.springframework.tooling.ls.eclipse.commons.STS4LanguageClientImpl.lambda$9(STS4LanguageClientImpl.java:439)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ReusableClasspathListenerHandler$CallbackJob.lambda$0(ReusableClasspathListenerHandler.java:76)
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75)
+	at org.springframework.tooling.jdt.ls.commons.classpath.ReusableClasspathListenerHandler$CallbackJob.run(ReusableClasspathListenerHandler.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2025-09-30 10:07:50.693
+!MESSAGE sk_test does not exist
+
+!ENTRY com.microsoft.copilot.eclipse 1 0 2025-09-30 10:07:50.760
+!MESSAGE [Info] Completion handler is refreshed for the document: file:///C:/Users/baoph/OneDrive/Documents/GitHub/Java/SK/java_schoolWork/src/stt02_PhanHoaiBao_Lt8/Demo1.java
