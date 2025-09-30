@@ -1,0 +1,13 @@
+package demoIO;
+
+import java.io.FileOutputStream;
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+		FileInputStream fi=null;
+		FileOutputStream fo=null;
+
+	}
+
+}

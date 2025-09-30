@@ -1,0 +1,28 @@
+package demoIO;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+
+public class DemoByteStream01 {
+
+	public static void main(String[] args) {
+		FileInputStream fis=null;
+		FileOutputStream fos=null;
+		try {
+			fis=new FileInputStream("data/input.txt");
+			fos=new FileOutputStream("src/demoIO/output.txt");
+			int data=-1;
+			while ((data=fis.read())!=-1) {
+				fos.write(data);
+			}
+			fos.close();
+			fis.close();
+			
+			byte []data=new byte[16];
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}
