@@ -1,10 +1,12 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import java.awt.Font;
+import java.awt.GridBagLayout;
 
 public class Calculator extends JFrame {
     
@@ -15,6 +17,19 @@ public class Calculator extends JFrame {
     
     JLabel label=new JLabel("0");
     JPanel panel=new JPanel();
+    JPanel buttonPanel=new JPanel();
+
+    String[] buttonValues = {
+        "AC", "+/-", "%", "÷", 
+        "7", "8", "9", "×", 
+        "4", "5", "6", "-",
+        "1", "2", "3", "+",
+        "0", ".", "√", "="
+    };
+    String[] rightSymbols = {"÷", "×", "-", "+", "="};
+    String[] topSymbols = {"AC", "+/-", "%"};
+   
+        
 
     public Calculator(){{
         setSize(400,600);
@@ -34,6 +49,10 @@ public class Calculator extends JFrame {
         panel.setLayout(new BorderLayout());
         panel.add(label);
         add(panel,BorderLayout.NORTH);
+
+        buttonPanel.setLayout(new GridLayout());
+        buttonPanel.setBackground(black);
+        add(buttonPanel);
 
 
 
