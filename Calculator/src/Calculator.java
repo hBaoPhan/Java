@@ -36,7 +36,9 @@ public class Calculator extends JFrame implements ActionListener {
     String[] rightSymbols = {"÷", "×", "-", "+", "="};
     String[] topSymbols = {"AC", "+/-", "%"};
    
-        
+    String A="0";
+    String operator=null;
+    String B=null;
 
     public Calculator(){
         setSize(400,600);
@@ -84,30 +86,72 @@ public class Calculator extends JFrame implements ActionListener {
 
             buttonPanel.add(button);
             button.addActionListener(this);
-
-
         }
-
-
-
-
-
-
     }
+
     public void actionPerformed(ActionEvent e){
         JButton button= (JButton)e.getSource();
         String buttonValue = button.getText();
         if(Arrays.asList(rightSymbols).contains(buttonValue)){
+            if(buttonValue == "="){
+                if(A !=null){
+                    B = label.getText();
+                    double numA= Double.parseDouble(A);
+                    double numB= Double.parseDouble(B);
+                    if(operator == "+"){
+                        label.setText(removeZeroDecimal(numA+numB));
+                        
+                          
+                    }
+                    if(operator == "-"){
+                        label.setText(removeZeroDecimal(numA-numB));
+                         
+                          
+                    }
+                    if(operator == "×"){
+                        label.setText(removeZeroDecimal(numA*numB)); 
+                         
+                        
+                    }
+                    if(operator == "÷"){
+                        if(numB==0){
+                            label.setText("Error");
+                        }
+                        else{
+                            label.setText(removeZeroDecimal(numA/numB));
+    
+                            
+                        }
+                    }
+                }
+
+            }
+            else if("+-÷×".contains(buttonValue)){
+                if(operator == null){
+                    A = label.getText();
+                    label.setText("0");
+                    B ="0";
+                }
+                operator = buttonValue;
+            }
+
 
         }
         else if(Arrays.asList(topSymbols).contains(buttonValue)){
             if(buttonValue=="AC"){
+                clearAll();
+                label.setText("0");
 
             }
             else if(buttonValue =="+/-"){
-
-            }else if(buttonValue =="%"){
-                
+                Double numDisplay=Double.parseDouble(label.getText());
+                numDisplay *= -1;
+                label.setText(removeZeroDecimal(numDisplay));
+            }
+            else if(buttonValue =="%"){
+                Double numDisplay=Double.parseDouble(label.getText());
+                numDisplay /= 100;
+                label.setText(removeZeroDecimal(numDisplay));
             }
 
         }else{
@@ -125,6 +169,18 @@ public class Calculator extends JFrame implements ActionListener {
                 }
             }
         }
+
+    }
+    public void clearAll(){
+        A ="0";
+        operator=null;
+        B =null;
+    }
+    public String removeZeroDecimal(double numDisplay){
+        if(numDisplay % 1==0){
+            return Integer.toString((int) numDisplay);
+        }
+        return Double.toString(numDisplay);
 
     }
     
