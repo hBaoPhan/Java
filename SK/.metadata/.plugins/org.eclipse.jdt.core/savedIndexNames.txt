@@ -1,4 +1,0 @@
-INDEX VERSION 1.134+C:\Users\baoph\OneDrive\Documents\GitHub\Java\SK\.metadata\.plugins\org.eclipse.jdt.core
-1288848795.index
-2226886422.index
-1865797976.index
