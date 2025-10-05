@@ -1,4 +1,4 @@
-package stt2_PhanHoaiBao_lt8;
+package stt02_PhanHoaiBao_lt8;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -11,7 +11,7 @@ public class RegExpTest02 {
 		Pattern p=Pattern.compile(pattern);
 		Matcher matcher=p.matcher(input);
 		while (matcher.find()) {
-			System.out.println(input.substring(matcher.start(), matcher.end())+"*");
+			System.out.print(input.substring(matcher.start(), matcher.end())+"*");
 		}
 
 	}

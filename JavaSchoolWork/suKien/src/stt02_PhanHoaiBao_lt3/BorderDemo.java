@@ -1,4 +1,4 @@
-package stt02_PhanHoaiBao_Lt3;
+package stt02_PhanHoaiBao_lt3;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
