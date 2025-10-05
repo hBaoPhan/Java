@@ -1,4 +1,4 @@
-package stt02_PhanHoaiBao_Lt8;
+package stt02_PhanHoaiBao_lt7;
 
 import java.io.File;
 import java.io.FileInputStream;
