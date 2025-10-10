@@ -151,7 +151,7 @@ public class GiaoDien extends JFrame implements ActionListener, MouseListener {
 
 		tableSach = new JTable(model);
 		JScrollPane scrCenter = new JScrollPane(tableSach);
-
+		
 		pnlCenter.add(scrCenter, BorderLayout.CENTER);
 		scrCenter.setBorder(BorderFactory.createTitledBorder("Danh sách các cuốn sách"));
 
@@ -216,7 +216,6 @@ public class GiaoDien extends JFrame implements ActionListener, MouseListener {
 	public void updateTable() {
 		model.getDataVector().removeAllElements();
 		for (int i = 0; i < dsSach.getSize(); i++) {
-
 			Sach sach = dsSach.getElemAt(i);
 			model.addRow(new Object[] { sach.getMaSach(), sach.getTuaSach(), sach.getTacGia(), sach.getNamXuatBan(),
 					sach.getNhaXuatBan(), sach.getSoTrang(), sach.getDonGia(), sach.getIsbn() });

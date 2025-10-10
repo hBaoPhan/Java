@@ -8,14 +8,14 @@ import java.io.ObjectOutput;
 import java.io.ObjectOutputStream;
 
 public class LuuTru {
-	public boolean LuuFile(Object obj,String filePath) throws Exception {
+	public static boolean LuuFile(Object obj,String filePath) throws Exception {
 		ObjectOutputStream oos=new ObjectOutputStream(new FileOutputStream(filePath));
 		oos.writeObject(obj);
 		oos.flush();
 		oos.close();
 		return true;
 	}
-	public Object DocFile(String filePath) throws Exception{
+	public static Object DocFile(String filePath) throws Exception{
 		ObjectInputStream ois=new ObjectInputStream(new FileInputStream(filePath));
 		Object o=ois.readObject();
 		ois.close();
