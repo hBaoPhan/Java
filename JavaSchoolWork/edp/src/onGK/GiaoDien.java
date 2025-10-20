@@ -183,12 +183,17 @@ public class GiaoDien extends JFrame implements ActionListener,MouseListener{
 			txtTuoi.setText("");
 			txtLuong.setText("");
 			cbPhai.setSelectedItem("Nam");
+			txtMa.setEditable(true);
 		}
 		else if(o.equals(btnXoa)) {
-			int row=table.getSelectedRow();
-			if(dsNV.xoa(row)) {
-				updateTable();
-				model.fireTableDataChanged();
+			boolean confirm=JOptionPane.showConfirmDialog(this, "Bạn có chắc muốn xóa không?","Xác nhận",JOptionPane.YES_NO_OPTION)==JOptionPane.YES_OPTION;
+			if(confirm==true) {
+				int row=table.getSelectedRow();
+				if(dsNV.xoa(row)) {
+					updateTable();
+					model.fireTableDataChanged();
+			}
+			
 
 			}
 		}
@@ -196,6 +201,7 @@ public class GiaoDien extends JFrame implements ActionListener,MouseListener{
 		
 			try {
 				LuuTru.luuFile(dsNV);
+				JOptionPane.showMessageDialog(this, "Lưu thành công");
 			} catch (Exception e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -208,12 +214,17 @@ public class GiaoDien extends JFrame implements ActionListener,MouseListener{
 				NhanVien nv=createObjectFromText();
 				if(dsNV.sua(nv)) {
 					updateTable();
+					txtMa.setEditable(true);
+					txtMa.setText("");
+					txtHoTen.setText("");
+					txtTuoi.setText("");
+					txtLuong.setText("");
+					cbPhai.setSelectedItem("Nam");
+					
 				}
 				else {
-					System.out.println("sua");
+					System.out.println("Chưa chọn nhân viên");
 				}
-			}else {
-				System.out.println("nah");
 			}
 			
 		}
