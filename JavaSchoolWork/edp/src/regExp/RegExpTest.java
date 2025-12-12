@@ -64,7 +64,7 @@ public class RegExpTest extends JFrame implements ActionListener {
 		pnlNorth.add(lblTuaSach = new JLabel("Email "));
 		pnlNorth.add(lblTacGia = new JLabel("Biển số: "));
 		pnlNorth.add(lblNamXB = new JLabel("Mssv: "));
-		pnlNorth.add(lblNhaXB = new JLabel("Nhà  xuất bản "));
+		pnlNorth.add(lblNhaXB = new JLabel("Tên:"));
 		pnlNorth.add(lblSoTrang = new JLabel("Số trang: "));
 		pnlNorth.add(lblDonGia = new JLabel("Đơn giá: "));
 		pnlNorth.add(lblISBN = new JLabel("International Standard Book Number: "));
@@ -161,14 +161,21 @@ public class RegExpTest extends JFrame implements ActionListener {
 		String isbn = txtISBN.getText().trim();
 		int soTrang;
 		String nhaXB=txtNhaXB.getText().trim();
-
-		if (!(ma.length() > 0 && ma.matches("DH(KHMT|KTPM|HTTT|CNTT|KHDL){1}\\d{2}[A-F](TT|_KSTN|_TCTA)*"))) {
+		
+		
+		if (!(nhaXB.length() > 0 && nhaXB.matches("[A-Z]\\w*( [A-Z]\\w*)+"))) {
+			JOptionPane.showMessageDialog(this, "Nhà xuất bản Không được chứa số và các ký tự đặc biệt ngoại trừ '");
+			txtNhaXB.requestFocus();
+			txtNhaXB.selectAll();
+			return false;
+		}
+		if (!(ma.length() > 0 && ma.matches("DH(KHMT|KTPM|HTTT|CNTT|KHDL)\\d{2}[A-F](TT|_KSTN|_TCTA)?"))) {
 			JOptionPane.showMessageDialog(this, "Phải đúng lớp danh nghĩa");
 			txtLop.requestFocus();
 			txtLop.selectAll();
 			return false;
 
-		} else if (!(email.length() > 0 && email.matches("[\\d\\w._\\-\\+]+\\@gmail\\.com"))) {
+		} else if (!(email.length() > 0 && email.matches("[\\d\\w\\._\\-\\+]+\\@gmail\\.com"))) {
 			JOptionPane.showMessageDialog(this, "Phải đúng dạng email");
 			txtEmail.requestFocus();
 			txtEmail.selectAll();
@@ -184,12 +191,7 @@ public class RegExpTest extends JFrame implements ActionListener {
 			txtBienSo.requestFocus();
 			txtBienSo.selectAll();
 			return false;
-		}else if (!(nhaXB.length() > 0 && nhaXB.matches("[\\w ']+"))) {
-			JOptionPane.showMessageDialog(this, "Nhà xuất bản Không được chứa số và các ký tự đặc biệt ngoại trừ '");
-			txtNhaXB.requestFocus();
-			txtNhaXB.selectAll();
-			return false;
-		}
+		} 
 		
 		
 		try {
