@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;entity&apos; to &apos;KaminoCoffee/src/gui&apos;&#x0D;&#x0A;- Original project: &apos;Downloads_btlonnn&apos;&#x0D;&#x0A;- Destination element: &apos;KaminoCoffee/src/gui&apos;&#x0D;&#x0A;- Original element: &apos;Downloads_btlonnn/src/entity&apos;" description="Copy package" destination="=KaminoCoffee/src&lt;gui" element1="/src&lt;entity" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1761537288356" version="1.0"/>
+</session>

@@ -1,0 +1,28 @@
+{
+  "conversationId": "eeb837bc-e817-4b2f-a78a-164e116d99c4",
+  "title": "không lấy được dữ liệu field thoiGian từ sql",
+  "requesterUsername": "hBaoPhan",
+  "responderUsername": "GitHub Copilot",
+  "turns": [
+    {
+      "message": {
+        "text": "không lấy được dữ liệu field thoiGian từ sql"
+      },
+      "currentDocument": {
+        "uri": "/KaminoCoffee/src/dao/DonDatBan_dao.java"
+      },
+      "references": [],
+      "ignoredSkills": [],
+      "userLanguage": "en",
+      "source": "panel",
+      "model": "GPT-5 mini",
+      "chatMode": "Agent",
+      "needToolCallConfirmation": true,
+      "turnId": "9a1dd364-c561-4a32-b436-43ad0f374845",
+      "role": "user",
+      "timestamp": "2025-11-06T02:56:12.219002300Z"
+    }
+  ],
+  "creationDate": "2025-11-06T02:56:12.158999Z",
+  "lastMessageDate": "2025-11-06T02:56:12.158999Z"
+}

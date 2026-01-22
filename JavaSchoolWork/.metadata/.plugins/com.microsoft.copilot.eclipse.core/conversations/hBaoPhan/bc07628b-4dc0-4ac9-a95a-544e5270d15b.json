@@ -1,0 +1,28 @@
+{
+  "conversationId": "bc07628b-4dc0-4ac9-a95a-544e5270d15b",
+  "title": "tại sao getAllBan không hoạt động",
+  "requesterUsername": "hBaoPhan",
+  "responderUsername": "GitHub Copilot",
+  "turns": [
+    {
+      "message": {
+        "text": "tại sao getAllBan không hoạt động"
+      },
+      "currentDocument": {
+        "uri": "/KaminoCoffee/src/gui/BanPanel.java"
+      },
+      "references": [],
+      "ignoredSkills": [],
+      "userLanguage": "en",
+      "source": "panel",
+      "model": "GPT-5 mini",
+      "chatMode": "Agent",
+      "needToolCallConfirmation": true,
+      "turnId": "40c7538c-ee46-4570-8f75-6885d08d9a7a",
+      "role": "user",
+      "timestamp": "2025-11-05T04:45:35.222541200Z"
+    }
+  ],
+  "creationDate": "2025-11-05T04:45:35.175541Z",
+  "lastMessageDate": "2025-11-05T04:45:35.175541Z"
+}

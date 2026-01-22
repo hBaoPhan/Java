@@ -1,0 +1,12 @@
+1762653904980	Rename method 'loadData'
+1762675574382	Rename method 'insertHoaDon'
+1762690523748	Rename local variable 'pnlDanhSachBan'
+1762723153117	Rename method 'updateTrangThaiDatBan'
+1762764935616	Rename method 'loadSanPhamVaoPanel'
+1762779833669	Rename field 'modelDatBan'
+1762779844711	Rename field 'tableDatBan'
+1762783950994	Rename field 'pnlDanhSachBan_QLBan'
+1762821193281	Rename field 'tggleDangSuDung'
+1762873456809	Delete element
+1762876144215	Delete element
+1763013972989	Rename field 'pnlThong'
